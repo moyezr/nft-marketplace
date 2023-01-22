@@ -1,0 +1,64 @@
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: #a749f9;
+  background: linear-gradient(to right, #a43dff 0%, #f78eff 100%);
+  -webkit-background-clip: text;
+  cursor: pointer;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+  width: 100vw;
+  height: 10%;
+  display: flex;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_container {
+  display: flex;
+  list-style: none;
+}
+
+.navbar_links {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar_links:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 1rem;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.navbar_links:hover::after {
+  content: "";
+  color: white;
+  width: 80%;
+}
+
+.navbar_links:hover {
+  color: rgb(206, 206, 206);
+  transform: scale(1.1);
+}
+
+.active:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 1rem;
+  height: 2px;
+  width: 80%;
+  background-color: white;
+}

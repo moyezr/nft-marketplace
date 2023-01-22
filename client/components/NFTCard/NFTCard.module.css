@@ -1,0 +1,14 @@
+.nftCard {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+
+.nftCard_img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,19 @@
+.home_container {
+    text-align: center;
+}
+
+.home_cta {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.nftCards_container {
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    place-items: center
+    ;
+}
