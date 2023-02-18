@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { alien } from "../img";
 import { isResSent } from "next/dist/shared/lib/utils";
 
-const nftPage = () => {
+const NFTPage = () => {
     const {currentAddress, fetchTokenForId, buyNFT, resellNFT} = useMarketContext();
     const [nft, setNft] = useState(null);
     const [buyNFTMsg, BuyNFTMsg] = useState("")
@@ -80,4 +80,4 @@ const nftPage = () => {
     </div>
   )
 }
-export default nftPage;
+export default NFTPage;

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useMarketContext } from "../utils/NFTMarketplaceContext";
 import {greenZombie} from "../img"
 import Styles from "../styles/listNFT.module.css";
-const listNFT = () => {
+const ListNFT = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -73,7 +73,7 @@ const listNFT = () => {
   );
 };
 
-export default listNFT;
+export default ListNFT;
 
 
 // {image != null ? (

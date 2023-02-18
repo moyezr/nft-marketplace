@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import NFTMarketplaceJSON from "./NFTMarketplace.json";
 import { ethers } from "ethers";
-// import Web3Modal from "web3modal";
 import { uploadFileToIPFS, uploadJSONToIPFS } from "./pinata";
 // import { getContractAddress } from "ethers/lib/utils";
 import axios from "axios";
 
-const contractAddr = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const contractAddr = "0xF1Df2B7241A77AEe4F0223c1636b38671C44C318";
 const NFTMarketplaceAbi = NFTMarketplaceJSON.abi;
 
 
@@ -16,7 +15,6 @@ const NFTMarketplaceAbi = NFTMarketplaceJSON.abi;
 const NFTMarkeplaceContext = React.createContext();
 
 const NFTMarketplaceProvider = ({ children }) => {
-  const web3ModalRef = useRef();
 
   const [currentAddress, setCurrentAddress] = useState("");
   const [walletConnected, setWalletConnected] = useState(false);

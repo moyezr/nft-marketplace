@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { NFTCard } from "../components/componentsIndex"
 // import { alien, bat, frankenstein, threeEyes, pumpkin, greenZombie } from "../img"
 import { useMarketContext } from "../utils/NFTMarketplaceContext"
-const profile = () => {
+const Profile = () => {
 
   // const ownedItems = [
   //   {
@@ -90,7 +90,9 @@ const profile = () => {
   }
 
   useEffect(() => {
-    connectWallet();
+    if(!walletConnected){
+      connectWallet();
+    }
     fetchOwnedNFTs();
     fetchListedNFTs();
   }, [currentAddress])
@@ -122,4 +124,4 @@ const profile = () => {
   )
 }
 
-export default profile
+export default Profile
