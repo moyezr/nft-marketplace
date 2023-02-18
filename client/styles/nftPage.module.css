@@ -1,0 +1,204 @@
+.nftPage_global_container {
+    width: 80%;
+    height: 80vh;
+    border: 2px solid wheat;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.nft_container {
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    /* background-color: wheat; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nft_img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid white;
+    padding: 0 4rem;
+}
+
+.nft_img {
+    height: 80%;
+    width: auto;
+
+}
+
+
+.nft_details_container {
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-left: 1rem;
+    place-items: baseline;
+}
+
+.nft_name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.nft_price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.nft_description {
+    color: rgb(210, 210, 210);
+}
+
+.nft_owner {
+    grid-column: span 2;
+    width: 100%;
+}
+.nft_owner span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+
+.nft_page_btn {
+
+    border: none;
+    outline: none;
+    background-color: #a749f9;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 15px;
+
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nft_page_btn:hover {
+    transform: scale(1.05);
+    background-color: #b769fc;
+}
+
+.btn_container {
+    grid-column: span 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.resell_input::placeholder {
+    color: rgb(186, 186, 186);
+}
+
+.resell_input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 0 0.5rem 0.5rem;
+    font-size: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.resell_input::-webkit-outer-spin-button,
+.resell_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.resell_input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+/* For Mobiles */
+
+@media screen and (max-width: 768px) {
+    .nftPage_global_container {
+        width: 90%;
+    }
+
+    .nft_container {
+        grid-template-columns: 1fr;
+    }
+
+    .nft_img {
+        width: 180px;
+        height: auto;
+    } 
+    .nft_img_container {
+        padding-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .nft_details_container {
+        display: grid;
+        width: 100%;
+        place-items: center;
+        place-content: center;
+        place-self: center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .nft_description {
+        font-size: 0.8rem;
+        grid-column: span 3;
+    }
+
+    .nft_name {
+        font-size: 1rem;
+        width: max-content;
+    }
+
+    .nft_price {
+        grid-column: span 2;
+        font-size: 1.3rem;
+    }
+
+    .nft_owner {
+        grid-column: span 3;
+        font-size: 0.8rem;
+    }
+
+    .nft_owner span {
+        /* grid-column: span 3; */
+        font-size: 0.8rem;
+    }
+
+    .btn_container {
+        grid-column: span 3;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .nft_page_btn {
+        font-size: 0.7rem;
+        width: fit-content;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .resell_input {
+        font-size: 0.6rem;
+        width: fit-content;
+        padding: 0 0.2rem 0.2rem;
+    }
+
+
+    .info_txt {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: center;
+    }
+    
+}

@@ -1,0 +1,89 @@
+.profile_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.profile_wallet_address span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.profile_wallet_address {
+    font-size: 1.3rem;
+}
+
+
+
+.profile_nfts_tabs_container {
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    justify-content: space-between;
+}
+
+.profile_nfts_tabs {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+}
+
+.isOpened {
+    background-color: purple;
+}
+
+.profile_nfts_container {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    place-items: center;
+}
+
+.nft_box {
+    width: 300px;
+    height: 400px;
+}
+
+
+.info_txt {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    grid-column: span 3;
+    vertical-align: center;
+}
+
+
+/* For Mobile Phones  */
+
+@media screen and (max-width: 768px) {
+    .profile_wallet_address {
+        font-size: 0.8rem;
+    }
+
+    .profile_wallet_address span {
+        font-size: 1rem;
+    }
+
+    .profile_nfts_tabs_container {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .profile_nfts_tabs {
+        font-size: 0.5rem;
+    }
+
+    .profile_nfts_container {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+    }
+}

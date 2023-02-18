@@ -1,31 +1,64 @@
 import Head from "next/head";
-import { Navbar, NFTCard } from "../components/componentsIndex";
+import { NFTCard, Message } from "../components/componentsIndex";
+import { useMarketContext } from "../utils/NFTMarketplaceContext";
 
 
 // INternal Imports
 import Styles from "../styles/Home.module.css";
-import {alien, frankenstein, bat} from "../img";
+import {alien, frankenstein, bat, threeEyes, pumpkin, greenZombie} from "../img";
+import { useEffect,useState } from "react";
+// import { walletconnect } from "web3modal/dist/providers/connectors";
 const Home = () => {
 
   const nftDemoData = [
     {
-      imageURL: alien,
+      image: alien,
       name: "Alien",
       price: "0.01",
       tokenId: 1
     }, {
-      imageURL: frankenstein,
+      image: frankenstein,
       name: "Frankenstein",
       price: "0.04",
       tokenId: 2
     },
     {
-      imageURL: bat,
+      image: bat,
       name: "Bat",
       price: "0.03",
       tokenId: 3
-    }
+    },
+    {
+      image: threeEyes,
+      name: "Three Eyes",
+      price: "0.04",
+      tokenId: 4
+    },
+    {
+      image: pumpkin,
+      name: "Pumpkin",
+      price: "0.04",
+      tokenId: 5
+    },
+    {
+      image: greenZombie,
+      name: "Green Zombie",
+      price: "0.04",
+      tokenId: 6
+    },
   ]
+
+  const [items, setItems] = useState([]);
+  const [dataFetched, setDataFetched] = useState(false);
+
+  const { connectWallet, fetchMarketItems, walletConnected } = useMarketContext();
+
+  useEffect(() => {
+    // connectWallet();
+    fetchMarketItems(setItems, setDataFetched);
+  }, [])
+
+  // console.log("Environment var -> ",process.env.PINATA_KEY);  
   return (
     <div>
       <Head>
@@ -34,15 +67,22 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={Styles.home_container} >
+      <div className={Styles.home_cta_container}>
         <p className={Styles.home_cta}>Purchase Your Favourite Non-Fungible Token</p>
+        {!walletConnected ? <p className={Styles.home_cta_para}>You are not Connected. Please Connect Your Wallet</p> : null }
+      </div>
       </div>
       <div className={Styles.nftCards_container}>
-        {nftDemoData.map((nftData, index) => {
+      {dataFetched ?(
+        items.length > 0 ? (items.map((nftData, index) => {
           return (
-            <NFTCard key={index + 1} nftData = {nftData} />
+            <NFTCard btnText="Buy This NFT" key={index + 1} nftData = {nftData} />
           )
-        })}
+        })) : null
+        ) : <p className={Styles.info_txt}>Fetching Marketplace Data ... Please Wait🤚 </p>}
+         
       </div> 
+      
     </div>
   )
 }

@@ -1,0 +1,38 @@
+.msg_container {
+    /* display: none; */
+    position: absolute;
+    width: 200vh;
+    height: 200vw;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    
+}
+
+.msg_box {
+    position: relative;
+    border: 2px solid white;
+    
+    width: 60%;
+    background-color: red;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.display_none {
+    display: none;
+}
+
+.msg_close_btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color:white;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+}
+.msg_txt {
+    font-size: 3rem;
+    color: white;
+}

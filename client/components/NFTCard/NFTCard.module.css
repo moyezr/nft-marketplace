@@ -1,14 +1,113 @@
 .nftCard {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+    background-color: transparent;
+    color: white;
+    width: 300px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
     border: 2px solid white;
-    border-radius: 10px;
-    padding: 2rem;
+    /* text-align: center; */
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    -webkit-box-shadow: -13px 10px 37px -14px rgba(255, 255, 255, 0.4), 15px -9px 37px -14px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: -13px 10px 37px -14px rgba(255, 255, 255, 0.4),15px -9px 37px -14px rgba(255, 255, 255, 0.4);
+    box-shadow: -13px 10px 37px -14px rgba(255, 255, 255, 0.4), 15px -9px 37px -14px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s;
 
 }
 
+.nftCard:hover {
+    transform: scale(1.02);
+}
+
+
 .nftCard_img {
+    margin: 0 auto;
+    width: 200px;
+    height:200px;
+    transition: transform 0.2s;
+}
+
+.nftCard_img:hover {
+    transform: scale(1.1);
+}
+
+.nftCard_details_container {
+    margin-top: 1rem;
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nftCard_details_text {
     width: 100%;
-    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0;
+
+}
+.nftCard_details_text p {
+    display: inline;
+}
+
+.buy_nft_btn { 
+    border: none;
+    outline: none;
+    background-color: #a749f9;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: fit-content;
+    border-radius: 15px;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.buy_nft_btn:hover { 
+    transform: scale(1.05);
+    background-color: #b769fc;
+}
+
+
+
+
+.nft_price {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nftCard {
+        width: 155px;
+        height: 200px;
+        margin: 0rem 0.5rem 1rem;
+    }
+
+    .nftCard_img {
+        width: 80%;
+        height: 100px;
+    }
+
+    .buy_nft_btn {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+        margin-top: 0.3rem;
+    }
+
+    .nftCard_details_text {
+        font-size: 0.5rem;
+    }
+
+    .nft_price {
+        font-weight: 600;
+        font-size: 0.6rem;
+    }
 }

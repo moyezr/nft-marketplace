@@ -1,0 +1,50 @@
+.connect_btn {
+    height: 100%;
+         
+
+        background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+        text-align: center;
+        /* text-transform: uppercase; */
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.connect_btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.connected_btn {
+         
+
+        background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);
+        text-align: center;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+
+
+     
+}
+
+@media screen and (max-width: 768px) {
+    .connect_btn {
+        height: 50px;
+    }
+}

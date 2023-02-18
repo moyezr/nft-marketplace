@@ -20,6 +20,7 @@
 .navbar_container {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 .navbar_links {
@@ -62,3 +63,4 @@
   width: 80%;
   background-color: white;
 }
+
